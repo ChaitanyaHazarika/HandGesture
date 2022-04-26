@@ -1,0 +1,74 @@
+ 
+<html>
+    <head>
+      <title>Emotion To Emoji</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Inconsolata:wght@500&family=Kanit&family=League+Gothic&family=Montserrat:ital,wght@1,200&family=Oswald&family=Roboto+Mono:wght@500&family=Rubik+Wet+Paint&family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body>
+    <div class="container">
+    
+      <center>
+        <h3 class="btn btn-warning heading" >Hand Gesture Recogniser 
+          <br>
+          <span>👍<span>
+          <span>✌</span>
+          <span>👌</span>
+        </h3>
+        <br><br>
+  
+        <p style="font-size: 22px;">Take a picture to recognise the hand sign 
+            <br>
+          <b style="color: yellow">Amazing</b>
+          <br>
+          <b style="color: black">Good</b>
+          <br>
+          <b style="color: red">Peace</b>
+          <br>
+        </p>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Camera - </label>
+          <div id="camera">
+          </div>
+          <br><br>
+          <button onclick="snap()" class="btn btn-danger">Capture Image</button>
+  
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Prediction 1 - </label>
+          <p class="emotion_name" id="result_name"></p>
+          <p class="emoji" id="update_emoji"></p>
+          
+          <label>Prediction 2 - </label>
+          <p class="emotion_name" id="result_name2"></p>
+          <p class="emoji" id="update_emoji2"></p>
+          
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Snapshot - </label>
+          <div id="result"></div>
+          <br><br>
+          <button onclick="check()" class="btn btn-success">Predict Hand Sign</button>
+        </div>
+  
+      </center>
+  
+    </div>
+  
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
+  
+   
